@@ -24,6 +24,10 @@ public class Day2 {
         int tax_percent = scan.nextInt();
         scan.nextLine(); // handle next line character (enter key)
 
+        // Close the scanner object, because we've finished reading
+        // all of the input from stdin needed for this challenge.
+        scan.close();
+
         double tip = ((double) tip_percent / 100) * meal_cost;
         double tax = ((double) tax_percent / 100) * meal_cost;;
         double total = meal_cost + tip + tax;
